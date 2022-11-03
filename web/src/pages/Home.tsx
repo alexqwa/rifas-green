@@ -27,7 +27,7 @@ export function Home() {
   return (
     <>
       <header className="sticky left-0 top-0 p-6 border-b-[1px] backdrop-blur-md backdrop-saturate-[180%] bg-zinc-900/80 border-rifas-border-line z-[9998]">
-        <div className="w-[1120px] m-auto flex items-center justify-between">
+        <div className="md:w-[600px] lg:w-[1120px] m-auto flex items-center justify-between">
           <a href="/">
             <img className="h-11" src={rifasIcon} alt="Rifas Green" />
           </a>
@@ -49,10 +49,10 @@ export function Home() {
         </div>
       </header>
 
-      <main className="max-w-[1120px] m-auto my-24">
-        <section className="flex items-start justify-between mb-10">
-          <div className="flex flex-col items-start gap-6">
-            <h1 className="font-bold text-white text-5xl">
+      <main className="md:max-w-[640px] lg:max-w-[1120px] m-auto my-24">
+        <section className="md:flex-col md:justify-center md:items-center lg:flex lg:flex-row lg:items-start lg:justify-between mb-10">
+          <div className="md:items-center md:flex md:flex-col md:justify-center md:mb-6 lg:flex lg:flex-col lg:items-start gap-6">
+            <h1 className="md:text-center lg:text-start font-bold text-white text-5xl">
               Crie suas rifas de forma <br /> rápida e prática
             </h1>
             <p className="leading-6 text-[#e1e1e6]">
@@ -70,6 +70,7 @@ export function Home() {
             </button>
           </div>
           <svg
+            className="md:hidden lg:block"
             xmlns="http://www.w3.org/2000/svg"
             height={380}
             viewBox="0 0 735 1244"
@@ -444,141 +445,169 @@ export function Home() {
         </section>
         <section className="flex flex-col items-center">
           <div className="w-[1.5px] h-20 bg-gradient-to-b from-violet-500 to-zinc-900" />
-          <h1 className="mt-16 font-bold text-white text-5xl text-center leading-tight mb-24">
+          <h1 className="mt-16 md:text-4xl md:mb-14 font-bold text-white text-5xl text-center leading-tight mb-24">
             Somos uma plataforma completa de <br /> vendas e gerenciamento de
             rifas
           </h1>
           <Tab />
         </section>
         <section className="border-b-[1px] border-[rgb(41,41,46)] mt-16">
-          <h1 className="text-white text-5xl font-bold text-center leading-tight mb-10">
+          <h1 className="text-white md:text-4xl lg:text-5xl font-bold text-center leading-tight mb-10">
             Escolha o melhor plano que se adapte <br />
             mais aos seus objetivos
           </h1>
-          <div className="flex items-center justify-evenly gap-10 mb-10">
+          <div className="flex items-center justify-evenly md:gap-4 lg:gap-10 mb-10">
             <div className="bg-[#202024] rounded-lift w-full border-2 border-[rgb(41,41,46)]">
               <header className="flex items-center justify-center p-4 w-full">
-                <h1 className="text-white font-bold text-2xl">Plano Prata</h1>
+                <h1 className="text-white font-bold md:text-1xl lg:text-2xl">
+                  Plano Prata
+                </h1>
               </header>
               <div className="w-full border-[rgb(18,18,20)] border-t-[1px] flex p-6 flex-col items-start justify-center border-b-[1px]">
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <File size={18} />
                   Até 5.000 bilhetes
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Tabs size={18} />
                   100 Rifinhas gratís
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Percent size={18} />5 Promoções por mês
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Barcode size={18} />
                   10 Cupons de desconto por mês
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Users size={18} />
                   50 Afiliados por mês
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Medal size={18} />
                   Concorra a prêmios todos os dias
                 </p>
               </div>
               <footer className="p-4 w-full flex flex-col items-center justify-center gap-4">
                 <div className="flex justify-center flex-start">
-                  <span className="text-white/80 text-sm mt-2 mr-1">R$</span>
-                  <h3 className="text-white font-bold text-2xl">39</h3>
-                  <p className="text-white ml-[2px]">,90</p>
-                  <small className="text-white/80 ml-1">/rifa</small>
+                  <span className="text-white/80 md:text-xs lg:text-sm md:mt-1 lg:mt-2 mr-1">
+                    R$
+                  </span>
+                  <h3 className="text-white font-bold md:text-1xl lg:text-2xl">
+                    39
+                  </h3>
+                  <p className="text-white lg:text-base md:text-xs ml-[2px]">
+                    ,90
+                  </p>
+                  <small className="text-white/80 md:text-xs lg:text-xs ml-1">
+                    /rifa
+                  </small>
                 </div>
-                <button className="bg-violet-500/80 hover:bg-violet-500 transition-colors text-white text-sm uppercase font-bold w-full rounded-[5px] h-[50px]">
+                <button className="bg-violet-500/80 hover:bg-violet-500 transition-colors text-white text-sm uppercase font-bold w-full rounded-[5px] md:h-10 lg:h-[50px]">
                   Criar rifa
                 </button>
               </footer>
             </div>
             <div className="bg-[#202024] rounded-lift w-full border-2 border-[rgb(41,41,46)]">
               <header className="flex items-center justify-center p-4 w-full">
-                <h1 className="text-white font-bold text-2xl">
+                <h1 className="text-white font-bold md:text-1xl lg:text-2xl">
                   Plano Diamante
                 </h1>
               </header>
               <div className="w-full border-[rgb(18,18,20)] border-t-[1px] flex p-6 flex-col items-start justify-center border-b-[1px]">
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <File size={18} />
                   Até 100.000 bilhetes
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Tabs size={18} />
                   Rifinhas ilimitadas
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Percent size={18} />
                   Promoções ilimitadas
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Barcode size={18} />
                   Cupons de desconto ilimitados
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Users size={18} />
                   Afiliados ilimitados
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Medal size={18} />
                   Prêmios ilimitados
                 </p>
               </div>
               <footer className="p-4 w-full flex flex-col items-center justify-center gap-4">
                 <div className="flex justify-center flex-start">
-                  <span className="text-white/80 text-sm mt-2 mr-1">R$</span>
-                  <h3 className="text-white font-bold text-2xl">199</h3>
-                  <p className="text-white ml-[2px]">,90</p>
-                  <small className="text-white/80 ml-1">/rifa</small>
+                  <span className="text-white/80 md:text-xs lg:text-sm md:mt-1 lg:mt-2 mr-1">
+                    R$
+                  </span>
+                  <h3 className="text-white font-bold md:text-1xl lg:text-2xl">
+                    199
+                  </h3>
+                  <p className="text-white md:text-xs lg:text-base ml-[2px]">
+                    ,90
+                  </p>
+                  <small className="text-white/80 md:text-xs lg:text-xs ml-1">
+                    /rifa
+                  </small>
                 </div>
-                <button className="bg-violet-500/80 hover:bg-violet-500 transition-colors text-white text-sm uppercase font-bold w-full rounded-[5px] h-[50px]">
+                <button className="bg-violet-500/80 hover:bg-violet-500 transition-colors text-white text-sm uppercase font-bold w-full rounded-[5px] md:h-10 lg:h-[50px]">
                   Criar rifa
                 </button>
               </footer>
             </div>
             <div className="bg-[#202024] rounded-lift w-full border-2 border-[rgb(41,41,46)]">
               <header className="flex items-center justify-center p-4 w-full">
-                <h1 className="text-white font-bold text-2xl">Plano Ouro</h1>
+                <h1 className="text-white font-bold md:text-1xl lg:text-2xl">
+                  Plano Ouro
+                </h1>
               </header>
               <div className="w-full border-[rgb(18,18,20)] border-t-[1px] flex p-6 flex-col items-start justify-center border-b-[1px]">
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <File size={18} />
                   Até 20.000 bilhetes
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Tabs size={18} />
                   500 Rifinhas gratís
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Percent size={18} />
                   30 Promoções por mês
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Barcode size={18} />
                   20 Cupons de desconto por mês
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Users size={18} />
                   200 Afiliados por mês
                 </p>
-                <p className="text-white/80 text-sm w-full py-2 flex items-center gap-2">
+                <p className="text-white/80 md:text-xs lg:text-sm w-full py-2 flex items-center gap-2">
                   <Medal size={18} />
                   Concorra a 5 prêmios todos os dias
                 </p>
               </div>
               <footer className="p-4 w-full flex flex-col items-center justify-center gap-4">
                 <div className="flex justify-center flex-start">
-                  <span className="text-white/80 text-sm mt-2 mr-1">R$</span>
-                  <h3 className="text-white font-bold text-2xl">95</h3>
-                  <p className="text-white ml-[2px]">,90</p>
-                  <small className="text-white/80 ml-1">/rifa</small>
+                  <span className="text-white/80 md:text-xs lg:text-sm md:mt-1 lg:mt-2 mr-1">
+                    R$
+                  </span>
+                  <h3 className="text-white font-bold md:text-1xl lg:text-2xl">
+                    95
+                  </h3>
+                  <p className="text-white md:text-xs lg:text-xs ml-[2px]">
+                    ,90
+                  </p>
+                  <small className="text-white/80 md:text-xs lg:text-xs ml-1">
+                    /rifa
+                  </small>
                 </div>
-                <button className="bg-violet-500/80 hover:bg-violet-500 transition-colors text-white text-sm uppercase font-bold w-full rounded-[5px] h-[50px]">
+                <button className="bg-violet-500/80 hover:bg-violet-500 transition-colors text-white text-sm uppercase font-bold w-full rounded-[5px] md:h-10 lg:h-[50px]">
                   Criar rifa
                 </button>
               </footer>
@@ -586,13 +615,13 @@ export function Home() {
           </div>
         </section>
         <section className="flex flex-col items-center justify-center mt-10">
-          <h1 className="text-white text-5xl font-bold self-start mb-10">
+          <h1 className="text-white md:text-4xl lg:text-5xl font-bold self-start mb-10">
             Dúvidas frequentes
           </h1>
           <Accordion.Root
             type="single"
             collapsible
-            className="grid grid-cols-2 gap-6 w-full"
+            className="grid lg:grid-cols-2 gap-6 w-full"
           >
             <AccordionItem
               value="item-1"

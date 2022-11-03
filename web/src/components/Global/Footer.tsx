@@ -8,26 +8,30 @@ export function Footer() {
 
   return (
     <footer className="border-t-[1px] border-rifas-border-line">
-      <div className="max-w-[1120px] m-auto py-14 flex items-center justify-between">
-        <div>
+      <div className="md:max-w-[640px] lg:max-w-[1120px] m-auto py-14 flex items-center justify-between">
+        <div className="flex flex-col items-start">
           <img className="h-16 mb-6" src={rifasIcon} alt="Rifas Green" />
-          <p className="text-white text-sm mb-1">&copy; Rifas Green 2022</p>
-          <p className="text-white text-sm">Todos os direitos reservados</p>
+          <p className="text-white md:text-xs lg:text-sm mb-1">
+            &copy; Rifas Green 2022
+          </p>
+          <p className="text-white md:text-xs lg:text-sm">
+            Todos os direitos reservados
+          </p>
         </div>
-        <div className="flex gap-14">
-          <ul className="flex flex-col gap-2">
+        <div className="lg:flex lg:gap-14 md:grid md:grid-cols-3 md:ml-10 md:gap-x-10 md:gap-y-4">
+          <ul className="flex flex-col gap-2 md:mr-4">
             <span className="font-bold text-white text-base">
               Assessoria de imprensa
             </span>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               alexandre@rifasgreen.com.br
             </a>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               gabriel@rifasgreen.com.br
             </a>
@@ -36,25 +40,25 @@ export function Footer() {
             <span className="font-bold text-white text-base">Plataforma</span>
             <Link
               to="/"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Ínicio
             </Link>
             <Link
               to="/dashboard/me/raffles"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Criar rifa
             </Link>
             <Link
               to={`/dashboard/me/${user?.name}`}
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Página de perfil
             </Link>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Sorteios
             </a>
@@ -63,25 +67,25 @@ export function Footer() {
             <span className="font-bold text-white text-base">Sobre</span>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               A Rifa Green
             </a>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Direitos autorais
             </a>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Termos de uso
             </a>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Políticas de privacidade
             </a>
@@ -90,13 +94,13 @@ export function Footer() {
             <span className="font-bold text-white text-base">Dúvidas</span>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Comunidade
             </a>
             <a
               href="#"
-              className="text-[#e1e1e1] text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+              className="text-[#e1e1e1] md:text-xs lg:text-sm no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Central de ajuda
             </a>

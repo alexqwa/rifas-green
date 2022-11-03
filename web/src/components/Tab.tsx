@@ -4,7 +4,7 @@ import { HardDrives, ArrowUpRight, DiceThree, Medal } from "phosphor-react"
 
 export function Tab() {
   return (
-    <Tabs.Root className=" w-full" defaultValue="tab1">
+    <Tabs.Root className="w-full" defaultValue="tab1">
       <Tabs.List className="w-full flex gap-4 border-b-[1px] border-rifas-border-line mb-10">
         <StyledTabs
           value="tab1"
