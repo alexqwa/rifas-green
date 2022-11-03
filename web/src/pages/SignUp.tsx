@@ -51,10 +51,9 @@ export function SignUp() {
             .
           </div>
           <button
-            disabled
-            className="disabled:bg-violet-600 disabled:cursor-not-allowed font-bold text-base text-violet-300 rounded-[5px] transition-colors mt-5 h-[50px] bg-violet-500 hover:bg-violet-600"
+            className="uppercase disabled:bg-violet-600 disabled:cursor-not-allowed font-bold text-base text-violet-300 rounded-[5px] transition-colors mt-5 h-[50px] bg-violet-500 hover:bg-violet-600"
           >
-            CADASTRAR
+            Cadastrar
           </button>
         </section>
       </form>

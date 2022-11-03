@@ -1,5 +1,7 @@
 import { FormEvent, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { IMaskInput } from "react-imask"
+
 import * as Dialog from "@radix-ui/react-dialog"
 import { StyledContent, StyledOverlay } from "../../stitches/stitchesModal"
 import {
@@ -14,23 +16,52 @@ import { database } from "../../services/firebase"
 import { useAuth } from "../../hooks/useAuth"
 import { Input } from "../Global/Input"
 
+export type RafflesProps = {
+  title: string
+  price: number
+  category: string
+  phoneNumber: string
+  numbersOfRaffles: number
+}
+
 export function ModalCreateRaffle() {
-  const navigate = useNavigate()
-  const [newRaffle, setNewRaffle] = useState("")
   const { user } = useAuth()
+  const navigate = useNavigate()
+
+  const [newRaffle, setNewRaffle] = useState({
+    title: "",
+    price: 0,
+    category: "",
+    phoneNumber: "",
+    numbersOfRaffles: 0,
+  })
+
+  const handleChange = (e: any) => {
+    setNewRaffle((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+  }
 
   async function handleCreateRaffle(event: FormEvent) {
     event.preventDefault()
 
-    if (newRaffle.trim() === "") {
+    if (newRaffle.title.trim() === "") {
       return
     }
 
     const raffleRef = database.ref("raffles")
 
     const firebaseRaffle = await raffleRef.push({
-      title: newRaffle,
-      authorId: user?.id,
+      title: newRaffle.title,
+      author: {
+        id: user?.id,
+        name: user?.name,
+        avatar: user?.avatar,
+      },
+      content: {
+        price: `R$ ${newRaffle.price}.00`,
+        category: newRaffle.category,
+        phoneNumber: newRaffle.phoneNumber,
+        numbersOfRaffles: newRaffle.numbersOfRaffles,
+      },
     })
 
     navigate(`/dashboard/me/raffles/${firebaseRaffle.key}`)
@@ -58,11 +89,11 @@ export function ModalCreateRaffle() {
               O que está rifando ?
             </label>
             <Input
+              name="title"
               placeholder="Título do produto"
               type="text"
               autoFocus
-              onChange={(event) => setNewRaffle(event.target.value)}
-              value={newRaffle}
+              onChange={handleChange}
             >
               <Article
                 size={16}
@@ -77,7 +108,12 @@ export function ModalCreateRaffle() {
               <label htmlFor="category" className="text-white/80 text-sm">
                 Selecione a categoria
               </label>
-              <Input placeholder="Categoria" type="category">
+              <Input
+                name="category"
+                placeholder="Categoria"
+                type="text"
+                onChange={handleChange}
+              >
                 <SelectionAll
                   size={16}
                   weight="fill"
@@ -88,9 +124,14 @@ export function ModalCreateRaffle() {
 
             <div className="flex flex-col gap-1">
               <label htmlFor="numbers" className="text-white/80 text-sm">
-                Quantidade de números
+                Quantidade de bilhetes
               </label>
-              <Input placeholder="Quantidade" type="number">
+              <Input
+                name="numbersOfRaffles"
+                placeholder="Quantidade"
+                type="number"
+                onChange={handleChange}
+              >
                 <ListNumbers
                   size={16}
                   weight="fill"
@@ -105,7 +146,18 @@ export function ModalCreateRaffle() {
               <label htmlFor="phone" className="text-white/80 text-sm">
                 Número de telefone
               </label>
-              <Input placeholder="(00) 00000-0000" type="text">
+              {/* <IMaskInput
+                className="relative pr-[1em] pl-11 h-[50px] rounded-lift bg-zinc-900 box-content border-2 border-rifas-border-line focus:border-violet-500 transition-colors text-sm text-white placeholder:text-white/70 focus:outline-0"
+                placeholder="+55 (00) 00000-0000"
+                mask="+55 (00) 00000-0000"
+                onAccept={(value, mask) => console.log(value)}
+              /> */}
+              <Input
+                name="phoneNumber"
+                placeholder="(00) 00000-0000"
+                type="text"
+                onChange={handleChange}
+              >
                 <Phone
                   size={16}
                   weight="fill"
@@ -116,9 +168,14 @@ export function ModalCreateRaffle() {
 
             <div className="flex flex-col gap-1">
               <label htmlFor="price" className="text-white/80 text-sm">
-                Preço por cota
+                Preço por bilhete
               </label>
-              <Input placeholder="R$ 0,00" type="text">
+              <Input
+                name="price"
+                placeholder="R$ 0,00"
+                type="number"
+                onChange={handleChange}
+              >
                 <Bank
                   size={16}
                   weight="fill"

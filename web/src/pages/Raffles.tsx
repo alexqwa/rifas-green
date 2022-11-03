@@ -5,8 +5,13 @@ import { Navbar } from "../components/Global/Navbar"
 import { Footer } from "../components/Global/Footer"
 import { RaffleCard } from "../components/RaffleCard"
 import { ModalCreateRaffle } from "../components/Modals/ModalCreateRaffle"
+import { useRaffle } from "../hooks/useRaffle"
+import { useNavigate } from "react-router-dom"
 
 export function Raffles() {
+  const { raffles } = useRaffle()
+  const navigate = useNavigate()
+
   return (
     <>
       <Navbar />
@@ -22,7 +27,7 @@ export function Raffles() {
             <h1 className=" font-bold text-white text-base">Minhas rifas</h1>
             <div className="bg-white h-1 w-1 rounded-[50%]" />
             <p className="text-white/80 text-xs font-bold">
-              07 rifa(s) cadastradas
+              {raffles.length} rifa(s) cadastradas
             </p>
           </div>
           <Dialog.Root>
@@ -32,12 +37,22 @@ export function Raffles() {
             <ModalCreateRaffle />
           </Dialog.Root>
         </div>
-
         <div className="grid grid-cols-4 gap-4 mt-4">
-          <RaffleCard />
-          <RaffleCard />
-          <RaffleCard />
-          <RaffleCard />
+          {raffles.map((raffle) => {
+            function handleEditRaffles() {
+              navigate(raffle.id)
+            }
+
+            return (
+              <RaffleCard
+                key={raffle.id}
+                urlTo={raffle.id}
+                title={raffle.title}
+                content={raffle.content}
+                editRaffles={handleEditRaffles}
+              />
+            )
+          })}
         </div>
       </div>
       <Footer />
