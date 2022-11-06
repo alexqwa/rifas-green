@@ -3,7 +3,7 @@ import * as Dialog from "@radix-ui/react-dialog"
 import { CircleWavyWarning, SignOut } from "phosphor-react"
 import { StyledContent, StyledOverlay } from "../../stitches/stitchesModal"
 
-export function ModalExitPlatform() {
+export function ModalExit() {
   const navigate = useNavigate()
 
   function handleSignOut() {

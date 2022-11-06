@@ -1,29 +1,75 @@
+import { useState } from "react"
 import { Article, Bank, ListNumbers, Phone } from "phosphor-react"
-import { Button } from "../components/Global/Button"
 import { Input } from "../components/Global/Input"
 import { Navbar } from "../components/Global/Navbar"
 import { Selector } from "../components/Global/Selector"
 import { Tab } from "../components/Tab"
 
 export function AboutRaffles() {
+  const [information, setInformation] = useState(true)
+  const [payments, setPayments] = useState(false)
+  const [design, setDesign] = useState(false)
+
+  document.addEventListener("scroll", () => {
+    const pageOffY = window.pageYOffset
+
+    if (pageOffY == 0) {
+      setInformation(true)
+      setPayments(false)
+      setDesign(false)
+    }
+
+    if (pageOffY >= 500) {
+      setInformation(false)
+      setDesign(false)
+      setPayments(true)
+    }
+
+    if (pageOffY >= 700) {
+      setPayments(false)
+      setDesign(true)
+    }
+  })
   return (
     <>
       <Navbar />
       <div className="w-full max-w-[1152px] m-auto pt-[52px]">
         <main className="w-full flex items-start justify-between gap-20">
           <div className="flex flex-col bg-[rgb(32,32,36)] rounded-lift py-2 w-[352px] sticky top-32">
-            <a className="w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 border-l-2 border-solid border-violet-500 cursor-pointer">
+            <a
+              href="#information"
+              className={
+                information
+                  ? `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-violet-500`
+                  : `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`
+              }
+            >
               Informações
             </a>
-            <a className="w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer">
+            <a
+              className={
+                payments
+                  ? `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-violet-500`
+                  : `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`
+              }
+            >
               Meios de pagamento
             </a>
-            <a className="w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer">
+            <a
+              className={
+                design
+                  ? `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-violet-500`
+                  : `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`
+              }
+            >
               Aparência da rifa
             </a>
           </div>
           <div className="flex-1 min-w-0 top-32 space-y-10 mb-10">
-            <section className="bg-[rgb(32,32,36)] p-8 rounded-lift">
+            <section
+              id="information"
+              className="bg-[rgb(32,32,36)] p-8 rounded-lift"
+            >
               <h2 className="font-bold text-white text-2xl mb-8">
                 Informações
               </h2>

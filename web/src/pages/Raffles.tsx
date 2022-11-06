@@ -6,7 +6,7 @@ import { useRaffle } from "../hooks/useRaffle"
 
 import { Navbar } from "../components/Global/Navbar"
 import { RaffleCard } from "../components/RaffleCard"
-import { ModalCreateRaffle } from "../components/Modals/ModalCreateRaffle"
+import { ModalCreate } from "../components/Modals/ModalCreate"
 
 export function Raffles() {
   const { raffles } = useRaffle()
@@ -34,7 +34,7 @@ export function Raffles() {
             <Dialog.Trigger className="text-white/70 hover:text-white flex items-center justify-center hover:bg-zinc-900 h-10 w-10 rounded-[5px] transition-colors">
               <PlusCircle size={24} weight="fill" />
             </Dialog.Trigger>
-            <ModalCreateRaffle />
+            <ModalCreate />
           </Dialog.Root>
         </div>
         <div className="grid grid-cols-4 gap-4 mt-4">

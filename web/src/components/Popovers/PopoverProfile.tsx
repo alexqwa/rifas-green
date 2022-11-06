@@ -3,7 +3,7 @@ import * as Popover from "@radix-ui/react-popover"
 import * as Dialog from "@radix-ui/react-dialog"
 import { useAuth } from "../../hooks/useAuth"
 
-import { ModalExitPlatform } from "../Modals/ModalExitPlatform"
+import { ModalExit } from "../Modals/ModalExit"
 import { StyledContent } from "../../stitches/stitchesPopover"
 import { User, Cookie, Question, XSquare } from "phosphor-react"
 
@@ -43,7 +43,7 @@ export function PopoverProfile() {
               className="min-w-[1.25rem] text-violet-500"
             />
           </Dialog.Trigger>
-          <ModalExitPlatform />
+          <ModalExit />
         </Dialog.Root>
         <button className="block w-[calc(100%-48px)] mx-6 mt-4 mb-6 h-10 bg-violet-500 rounded-[5px] uppercase font-bold text-sm transition-colors text-white tracking-wider hover:bg-violet-400">
           DAR FEEDBACK

@@ -1,12 +1,15 @@
 import { FormEvent } from "react"
-import { useAuth } from "../hooks/useAuth"
+import * as Dialog from "@radix-ui/react-dialog"
 import { Link, useNavigate } from "react-router-dom"
 import { PaperPlaneTilt, Password } from "phosphor-react"
 import { FaGoogle } from "react-icons/fa"
 
 import rifasIcon from "../assets/images/logo.svg"
+
 import { Input } from "../components/Global/Input"
 import { Button } from "../components/Global/Button"
+import { useAuth } from "../hooks/useAuth"
+import { ModalForgot } from "../components/Modals/ModalForgot"
 
 export function SignIn() {
   const navigate = useNavigate()
@@ -51,12 +54,12 @@ export function SignIn() {
             />
           </Input>
         </section>
-        <a
-          href=""
-          className="self-start font-bold text-sm text-violet-500 opacity-80 hover:opacity-100 transition-opacity mt-2 mb-6"
-        >
-          Esqueci minha senha
-        </a>
+        <Dialog.Root>
+          <Dialog.Trigger className="self-start font-bold text-sm text-violet-500 opacity-80 hover:opacity-100 transition-opacity mt-2 mb-6">
+            Esqueci minha senha
+          </Dialog.Trigger>
+          <ModalForgot />
+        </Dialog.Root>
         <Button title="Entrar" w="full" h="[50px]" />
         <div className="text-sm mt-6 text-white/70 text-center">
           Não tem uma conta?&nbsp;

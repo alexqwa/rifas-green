@@ -24,7 +24,7 @@ export type RafflesProps = {
   numbersOfRaffles: number
 }
 
-export function ModalCreateRaffle() {
+export function ModalCreate() {
   const { user } = useAuth()
   const navigate = useNavigate()
 
