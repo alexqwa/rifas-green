@@ -37,12 +37,12 @@ type RaffleType = {
 
 export function useRaffle() {
   const [raffles, setRaffles] = useState<RaffleType[]>([])
-  const [title, setTitle] = useState("")
+  // const [title, setTitle] = useState("")
 
   useEffect(() => {
     const raffleRef = database.ref(`raffles`)
 
-    raffleRef.once("value", (raffle) => {
+    raffleRef.on("value", (raffle) => {
       const databaseRaffle = raffle.val()
       const firebaseContent: FirebaseContent = databaseRaffle ?? {}
 
@@ -57,10 +57,10 @@ export function useRaffle() {
         }
       )
 
-      setTitle(databaseRaffle.title)
+      // setTitle(databaseRaffle.title)
       setRaffles(parsedRaffles)
     })
-  }, [raffles])
+  }, [])
 
-  return { raffles, title }
+  return { raffles }
 }

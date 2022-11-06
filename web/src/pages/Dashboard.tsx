@@ -76,7 +76,6 @@ export function Dashboard() {
           </div>
         </main>
       </div>
-      <Footer />
     </>
   )
 }

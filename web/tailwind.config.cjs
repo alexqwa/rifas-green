@@ -10,6 +10,10 @@ module.exports = {
       sans: ["Roboto", "sans-serif"],
     },
     extend: {
+      screens: {
+        xs: "390px",
+      },
+
       borderRadius: {
         lift: "0.3125rem",
       },

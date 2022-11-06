@@ -1,5 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
-import { useRaffle } from "../hooks/useRaffle"
+import { Link } from "react-router-dom"
 
 type RaffleCardProps = {
   title: string
@@ -22,7 +21,7 @@ export function RaffleCard({
   editRaffles,
 }: RaffleCardProps) {
   return (
-    <div className="bg-[#202024] rounded-[5px] w-full h-full overflow-hidden p-4 border-2 border-rifas-border-line">
+    <div className="bg-[#202024] relative rounded-[5px] w-full overflow-hidden p-4 border-2 border-rifas-border-line">
       <img
         className="rounded-[5px] w-full"
         src="https://learnenglish.britishcouncil.org/sites/podcasts/files/2021-10/RS6715_492969113-hig.jpg"

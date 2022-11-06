@@ -5,7 +5,6 @@ import { PlusCircle } from "phosphor-react"
 import { useRaffle } from "../hooks/useRaffle"
 
 import { Navbar } from "../components/Global/Navbar"
-import { Footer } from "../components/Global/Footer"
 import { RaffleCard } from "../components/RaffleCard"
 import { ModalCreateRaffle } from "../components/Modals/ModalCreateRaffle"
 
@@ -39,7 +38,7 @@ export function Raffles() {
           </Dialog.Root>
         </div>
         <div className="grid grid-cols-4 gap-4 mt-4">
-          {raffles.map((raffle, author) => {
+          {raffles.map((raffle) => {
             function handleEditRaffles() {
               navigate(raffle.id)
             }
@@ -56,7 +55,6 @@ export function Raffles() {
           })}
         </div>
       </div>
-      <Footer />
     </>
   )
 }

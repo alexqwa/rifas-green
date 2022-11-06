@@ -1,7 +1,9 @@
 import { Article, Bank, ListNumbers, Phone } from "phosphor-react"
+import { Button } from "../components/Global/Button"
 import { Input } from "../components/Global/Input"
 import { Navbar } from "../components/Global/Navbar"
 import { Selector } from "../components/Global/Selector"
+import { Tab } from "../components/Tab"
 
 export function AboutRaffles() {
   return (
@@ -20,7 +22,7 @@ export function AboutRaffles() {
               Aparência da rifa
             </a>
           </div>
-          <div className="flex-1 min-w-0 h-screen top-32">
+          <div className="flex-1 min-w-0 top-32 space-y-10 mb-10">
             <section className="bg-[rgb(32,32,36)] p-8 rounded-lift">
               <h2 className="font-bold text-white text-2xl mb-8">
                 Informações
@@ -52,7 +54,7 @@ export function AboutRaffles() {
                     <label htmlFor="phone" className="text-white/80 text-sm">
                       Número de telefone
                     </label>
-                    <Input placeholder="(00) 4002-8922" type="text">
+                    <Input placeholder="+55 (00) 00000-0000" type="text">
                       <Phone
                         size={16}
                         weight="fill"
@@ -63,22 +65,7 @@ export function AboutRaffles() {
 
                   <div className="flex flex-col gap-1">
                     <label htmlFor="price" className="text-white/80 text-sm">
-                      Preço por cota
-                    </label>
-                    <Input placeholder="R$ 0,00" type="text">
-                      <Bank
-                        size={16}
-                        weight="fill"
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30"
-                      />
-                    </Input>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 mt-4">
-                  <div className="flex flex-col gap-1">
-                    <label htmlFor="numbers" className="text-white/80 text-sm">
-                      Quantidade de números
+                      Quantidade de bilhetes
                     </label>
                     <Input placeholder="Quantidade" type="number">
                       <ListNumbers
@@ -90,10 +77,44 @@ export function AboutRaffles() {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-2 mt-4">
+                  <div className="flex flex-col gap-1">
+                    <label htmlFor="numbers" className="text-white/80 text-sm">
+                      Preço por bilhete
+                    </label>
+
+                    <Input placeholder="R$ 0,00" type="text">
+                      <Bank
+                        size={16}
+                        weight="fill"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30"
+                      />
+                    </Input>
+                  </div>
+                </div>
+
                 <button className="py-4 px-8 mt-6 w-[180px] uppercase text-white font-bold text-sm rounded-lift self-end bg-violet-500/80 hover:bg-violet-500 transition-colors">
-                  salvar
+                  Salvar
                 </button>
               </form>
+            </section>
+
+            <section className="bg-[rgb(32,32,36)] p-8 rounded-lift">
+              <h2 className="font-bold text-white text-2xl mb-8">
+                Meios de pagamento
+              </h2>
+              <form className="flex flex-col">
+                <Tab />
+                <button className="py-4 px-8 mt-6 w-[180px] uppercase text-white font-bold text-sm rounded-lift self-end bg-violet-500/80 hover:bg-violet-500 transition-colors">
+                  Salvar
+                </button>
+              </form>
+            </section>
+
+            <section className="bg-[rgb(32,32,36)] p-8 rounded-lift">
+              <h2 className="font-bold text-white text-2xl mb-8">
+                Aparência da rifa
+              </h2>
             </section>
           </div>
         </main>

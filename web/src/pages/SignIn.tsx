@@ -6,6 +6,7 @@ import { FaGoogle } from "react-icons/fa"
 
 import rifasIcon from "../assets/images/logo.svg"
 import { Input } from "../components/Global/Input"
+import { Button } from "../components/Global/Button"
 
 export function SignIn() {
   const navigate = useNavigate()
@@ -56,12 +57,7 @@ export function SignIn() {
         >
           Esqueci minha senha
         </a>
-        <button
-          onClick={handleSignIn}
-          className="font-bold disabled:cursor-not-allowed disabled:bg-violet-600 text-violet-300 hover:bg-violet-500 transition-colors rounded-[5px] h-[50px] bg-violet-500/80 w-full"
-        >
-          ENTRAR
-        </button>
+        <Button title="Entrar" w="full" h="[50px]" />
         <div className="text-sm mt-6 text-white/70 text-center">
           Não tem uma conta?&nbsp;
           <Link
@@ -71,14 +67,14 @@ export function SignIn() {
             Registre-se
           </Link>
         </div>
-        <div className="relative text-xs text-[rgb(135, 134, 139)] my-6 mx-0 text-center before:left-0 before:content-[''] before:absolute before:top-1/2 before:w-[calc(50%-25px)] before:h-[1px] before:bg-rifas-border-line after:right-0 after:content-[''] after:absolute after:top-1/2 after:w-[calc(50%-25px)] after:h-[1px] after:bg-rifas-border-line" />
+        <div className="relative my-6 mx-0 before:left-0 before:content-[''] before:absolute before:top-1/2 before:w-[calc(50%-25px)] before:h-[1px] before:bg-rifas-border-line after:right-0 after:content-[''] after:absolute after:top-1/2 after:w-[calc(50%-25px)] after:h-[1px] after:bg-rifas-border-line" />
         <div className="flex">
           <div className="whitespace-nowrap text-white/70 text-sm mr-6 self-center">
             ou entre com
           </div>
           <button
             onClick={handleGoogleSignIn}
-            className="w-full justify-center flex items-center hover:bg-red-500 hover:firstfocus-visible:text-white bg-rifas-border-line rounded-[5px] border-0 text-white h-[50px] transition-colors text-base font-bold text-center"
+            className="w-full flex items-center justify-center hover:bg-red-500 bg-rifas-border-line rounded-lift text-white h-[50px] transition-colors font-bold"
           >
             <FaGoogle size={20} className="mr-2" />
             Google

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { PaperPlaneTilt, User, Password, ArrowLeft } from "phosphor-react"
 import rifasIcon from "../assets/images/logo.svg"
 import { Input } from "../components/Global/Input"
+import { Button } from "../components/Global/Button"
 
 export function SignUp() {
   return (
@@ -33,7 +34,7 @@ export function SignUp() {
               className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30"
             />
           </Input>
-          <div className="text-center text-white/70 text-sm leading-6 mt-3">
+          <div className="text-center text-white/70 text-sm leading-6 mt-3 mb-5">
             Ao se registrar, você aceita nossos&nbsp;
             <a
               href="/terms"
@@ -50,11 +51,7 @@ export function SignUp() {
             </a>
             .
           </div>
-          <button
-            className="uppercase disabled:bg-violet-600 disabled:cursor-not-allowed font-bold text-base text-violet-300 rounded-[5px] transition-colors mt-5 h-[50px] bg-violet-500 hover:bg-violet-600"
-          >
-            Cadastrar
-          </button>
+          <Button title="Cadastrar" w="full" h="[50px]" />
         </section>
       </form>
       <aside className="w-1/2 h-[90px] flex flex-col justify-center items-start gap-5">
