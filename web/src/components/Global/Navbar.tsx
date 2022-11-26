@@ -20,18 +20,18 @@ export function Navbar() {
       </div>
 
       <div className="flex flex-1 gap-2 items-center justify-end">
-        <button className="w-[46px] h-[46px] text-white/70 hover:text-white flex items-center justify-center hover:bg-zinc-900 rounded-[5px] transition-colors">
+        <button className="w-[46px] h-[46px] text-white/70 hover:text-white flex items-center justify-center transition-colors">
           <MagnifyingGlass size={24} />
         </button>
         <Popover.Root>
-          <Popover.Trigger className="w-[46px] h-[46px] text-white/70 hover:text-white flex items-center justify-center hover:bg-zinc-900 hover:first:stroke-blue-500 rounded-[5px] transition-colors">
+          <Popover.Trigger className="w-[46px] h-[46px] text-white/70 hover:text-white flex items-center justify-center hover:first:stroke-blue-500 transition-colors">
             <UserCirclePlus size={24} weight="fill" />
           </Popover.Trigger>
           <PopoverFriendRequest />
         </Popover.Root>
 
         <Popover.Root>
-          <Popover.Trigger className="w-[46px] h-[46px] text-white/70 hover:text-white flex items-center justify-center hover:bg-zinc-900 hover:first:text-white rounded-[5px] transition-colors">
+          <Popover.Trigger className="w-[46px] h-[46px] text-white/70 hover:text-white flex items-center justify-center hover:first:text-white transition-colors">
             <BellSimple size={24} weight="fill" />
           </Popover.Trigger>
           <PopoverNotification />

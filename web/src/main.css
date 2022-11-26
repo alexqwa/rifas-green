@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .first-letter {
+    @apply w-16 h-16 rounded-lift bg-[#09090A] text-violet-500 flex items-center justify-center font-bold text-3xl mr-4 transition-colors duration-300 group-hover:bg-violet-500 group-hover:text-white;
+  }
+
+  body {
+    @apply bg-[#18181b];
+  }
 }
 
-body {
-  background-color: #18181b;
+* {
+  box-sizing: border-box;
 }

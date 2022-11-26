@@ -1,35 +1,11 @@
-import { useState } from "react"
-import { Article, Bank, ListNumbers, Phone } from "phosphor-react"
+import * as Select from "@radix-ui/react-select"
+import { Article, Bank, ListNumbers, Phone, Plus } from "phosphor-react"
 import { Input } from "../components/Global/Input"
 import { Navbar } from "../components/Global/Navbar"
 import { Selector } from "../components/Global/Selector"
 import { Tab } from "../components/Tab"
 
 export function AboutRaffles() {
-  const [information, setInformation] = useState(true)
-  const [payments, setPayments] = useState(false)
-  const [design, setDesign] = useState(false)
-
-  document.addEventListener("scroll", () => {
-    const pageOffY = window.pageYOffset
-
-    if (pageOffY == 0) {
-      setInformation(true)
-      setPayments(false)
-      setDesign(false)
-    }
-
-    if (pageOffY >= 500) {
-      setInformation(false)
-      setDesign(false)
-      setPayments(true)
-    }
-
-    if (pageOffY >= 700) {
-      setPayments(false)
-      setDesign(true)
-    }
-  })
   return (
     <>
       <Navbar />
@@ -37,39 +13,23 @@ export function AboutRaffles() {
         <main className="w-full flex items-start justify-between gap-20">
           <div className="flex flex-col bg-[rgb(32,32,36)] rounded-lift py-2 w-[352px] sticky top-32">
             <a
-              href="#information"
-              className={
-                information
-                  ? `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-violet-500`
-                  : `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`
-              }
+              className={`w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-violet-500`}
             >
               Informações
             </a>
             <a
-              className={
-                payments
-                  ? `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-violet-500`
-                  : `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`
-              }
+              className={`w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`}
             >
               Meios de pagamento
             </a>
             <a
-              className={
-                design
-                  ? `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-violet-500`
-                  : `w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`
-              }
+              className={`w-full text-left text-white hover:bg-rifas-border-line text-base transition-colors py-3 px-6 cursor-pointer border-l-2 border-solid border-transparent`}
             >
               Aparência da rifa
             </a>
           </div>
           <div className="flex-1 min-w-0 top-32 space-y-10 mb-10">
-            <section
-              id="information"
-              className="bg-[rgb(32,32,36)] p-8 rounded-lift"
-            >
+            <section className="bg-[rgb(32,32,36)] p-8 rounded-lift">
               <h2 className="font-bold text-white text-2xl mb-8">
                 Informações
               </h2>
@@ -161,6 +121,18 @@ export function AboutRaffles() {
               <h2 className="font-bold text-white text-2xl mb-8">
                 Aparência da rifa
               </h2>
+              <form className="flex flex-col">
+                <div className="rounded-lift border-2 border-rifas-border-line border-dashed p-8 hover:border-white/30 transition-all cursor-pointer ">
+                  <span className="flex items-center justify-center gap-2 text-white/30 text-sm">
+                    <Plus className="text-violet-500" size={20} /> Fazer upload
+                    de imagem
+                  </span>
+                </div>
+
+                <button className="py-4 px-8 mt-6 w-[180px] uppercase text-white font-bold text-sm rounded-lift self-end bg-violet-500/80 hover:bg-violet-500 transition-colors">
+                  Salvar
+                </button>
+              </form>
             </section>
           </div>
         </main>

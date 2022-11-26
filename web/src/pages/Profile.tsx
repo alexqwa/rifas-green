@@ -1,7 +1,7 @@
 import { useAuth } from "../hooks/useAuth"
 import * as HoverCard from "@radix-ui/react-hover-card"
 import { StyledContent } from "../stitches/stitchesHoverCard"
-import { PencilSimple, Question } from "phosphor-react"
+import { PencilSimple, Plus, Question } from "phosphor-react"
 import { Navbar } from "../components/Global/Navbar"
 
 export function Profile() {
@@ -11,8 +11,8 @@ export function Profile() {
     <>
       <Navbar />
       <div className="max-w-[1152px] m-auto py-16">
-        <main className="w-full flex items-start">
-          <aside className="max-w-[312px] w-full space-y-6">
+        <div className="flex gap-x-20">
+          <div className="max-w-[312px] w-full space-y-6">
             <div className="bg-[rgb(32,32,36)] rounded-lift">
               <header className="p-8 relative text-center">
                 <button className="right-[10px] top-[10px] absolute self-end h-10 w-10 rounded-lift flex items-center justify-center text-white/50 hover:text-white hover:bg-rifas-border-line transition-colors">
@@ -36,7 +36,7 @@ export function Profile() {
               </footer>
             </div>
             <div className="bg-[rgb(32,32,36)] rounded-lift p-8 relative">
-              <HoverCard.Root openDelay={0} closeDelay={0}>
+              <HoverCard.Root openDelay={0} closeDelay={100}>
                 <HoverCard.Trigger className="absolute self-end right-[15px] top-[15px] text-white/70 hover:text-white transition-all">
                   <Question size={24} weight="fill" />
                 </HoverCard.Trigger>
@@ -62,8 +62,29 @@ export function Profile() {
             <div className="bg-[rgb(32,32,36)] rounded-lift p-8">
               <h1 className="text-white font-bold text-2xl">Interesses</h1>
             </div>
-          </aside>
-        </main>
+          </div>
+          <main className="w-full space-y-6">
+            <div className="rounded-lift bg-[rgb(32,32,36)] p-8">
+              <div className="flex items-center justify-between mb-10">
+                <h1 className="text-white font-bold text-2xl">Sobre mim</h1>
+                <button className="h-10 w-10 rounded-lift flex items-center justify-center text-white/50 hover:text-white hover:bg-rifas-border-line transition-colors">
+                  <PencilSimple size={16} weight="fill" />
+                </button>
+              </div>
+              <div className="rounded-lift border-2 border-rifas-border-line border-dashed p-8 hover:border-white/30 transition-all cursor-pointer ">
+                <span className="flex items-center justify-center gap-2 text-white/30 text-sm">
+                  <Plus className="text-violet-500" size={20} />
+                  Quem é você e o que faz?
+                </span>
+              </div>
+            </div>
+            <div className="rounded-lift bg-[rgb(32,32,36)] p-8">
+              <h1 className="text-white font-bold text-2xl">
+                Quantidade de rifas{" "}
+              </h1>
+            </div>
+          </main>
+        </div>
       </div>
     </>
   )

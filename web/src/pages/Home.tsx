@@ -44,7 +44,7 @@ export function Home() {
       </header>
 
       <main className="max-w-[1120px] m-auto my-24">
-        <section className="flex flex-row items-start justify-between mb-10">
+        <section className="flex items-start justify-between mb-10">
           <div className="flex flex-col items-start gap-6">
             <h1 className="text-start font-bold text-white text-5xl">
               Crie suas rifas de forma <br /> rápida e prática

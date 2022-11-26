@@ -12,7 +12,7 @@ export function PopoverProfile() {
 
   return (
     <Popover.Portal>
-      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-[rgb(32,32,36)] rounded-[5px] top-[calc(100%+25px)] shadow-lg">
+      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-[rgb(32,32,36)] rounded-[5px] top-[calc(100%+22px)] shadow-lg">
         <Popover.Arrow className="fill-[rgb(32,32,36)] absolute right-[calc(128px-31px)] w-4 h-2" />
         <Link
           to={`/dashboard/me/${user?.name}`}

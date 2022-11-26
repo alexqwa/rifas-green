@@ -16,12 +16,14 @@ export function Raffles() {
     <>
       <Navbar />
       <div className="w-full max-w-[1152px] m-auto py-16">
-        <h1 className="text-white font-bold text-4xl mb-2">Minhas rifas</h1>
-        <p className="text-white/70 text-base mb-6">
-          Cadastre novas rifas ou edite
-          <br />
-          as que você possuí!
-        </p>
+        <div className="flex flex-col items-start">
+          <h1 className="text-white font-bold text-4xl mb-2">Minhas rifas</h1>
+          <p className="text-white/70 text-base mb-6">
+            Cadastre novas rifas ou edite
+            <br />
+            as que você possuí!
+          </p>
+        </div>
         <div className="flex items-center justify-between bg-[#202024] w-full px-6 py-4 rounded-[5px]">
           <div className="flex items-center gap-2">
             <h1 className=" font-bold text-white text-base">Minhas rifas</h1>

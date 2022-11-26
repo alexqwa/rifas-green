@@ -1,8 +1,11 @@
 import * as Popover from "@radix-ui/react-popover"
 import { Notification } from "../Notification"
 import { StyledContent } from "../../stitches/stitchesPopover"
+import { useRaffle } from "../../hooks/useRaffle"
 
 export function PopoverNotification() {
+  const { raffles } = useRaffle()
+
   return (
     <Popover.Portal>
       <StyledContent className="block absolute w-[448px] right-[calc(100%-23px)] top-[calc(100%+25px)] shadow-lg">
@@ -22,26 +25,15 @@ export function PopoverNotification() {
           </h4>
 
           <div className="space-y-[2px]">
-            <Notification
-              title="Bem vindos ao Rifas Green"
-              description="Comece a rifar hoje mesmo!"
-            />
-            <Notification
-              title="Bem vindos ao Rifas Green"
-              description="Comece a rifar hoje mesmo!"
-            />
-            <Notification
-              title="Bem vindos ao Rifas Green"
-              description="Comece a rifar hoje mesmo!"
-            />
-            <Notification
-              title="Bem vindos ao Rifas Green"
-              description="Comece a rifar hoje mesmo!"
-            />
-            <Notification
-              title="Bem vindos ao Rifas Green"
-              description="Comece a rifar hoje mesmo!"
-            />
+            {raffles.map((raffle) => {
+              return (
+                <Notification
+                  key={raffle.id}
+                  title={raffle.title}
+                  description={raffle.content.category}
+                />
+              )
+            })}
           </div>
         </div>
         <a
