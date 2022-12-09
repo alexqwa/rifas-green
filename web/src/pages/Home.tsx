@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import * as Accordion from "@radix-ui/react-accordion"
 import { AccordionItem } from "../components/Accordion/AccordionItem"
@@ -11,11 +10,14 @@ import { Tab } from "../components/Tab"
 import { Footer } from "../components/Global/Footer"
 import { Prices } from "../components/Prices"
 
+import { usePageQuery } from "../generated/graphql"
+
 export function Home() {
+  const [{ data }] = usePageQuery({ variables: { slug: "about" } })
   const navigate = useNavigate()
 
   function handleCreateAccount() {
-    navigate("/signup")
+    navigate("https://help.qwastore.com.br/signup")
   }
 
   return (
@@ -47,7 +49,7 @@ export function Home() {
         <section className="flex items-start justify-between mb-10">
           <div className="flex flex-col items-start gap-6">
             <h1 className="text-start font-bold text-white text-5xl">
-              Crie suas rifas de forma <br /> rápida e prática
+              {data?.page?.title}
             </h1>
             <p className="leading-6 text-[#e1e1e6]">
               Crie e gerencie suas rifas em segundos <br /> com os melhores

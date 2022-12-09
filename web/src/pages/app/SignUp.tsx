@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 import { PaperPlaneTilt, User, Password, ArrowLeft } from "phosphor-react"
-import rifasIcon from "../assets/images/logo.svg"
-import { Input } from "../components/Global/Input"
-import { Button } from "../components/Global/Button"
+import rifasIcon from "../../assets/images/logo.svg"
+import { Input } from "../../components/Global/Input"
+import { Button } from "../../components/Global/Button"
 
 export function SignUp() {
   return (

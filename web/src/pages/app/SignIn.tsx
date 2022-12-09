@@ -4,12 +4,12 @@ import { Link, useNavigate } from "react-router-dom"
 import { PaperPlaneTilt, Password } from "phosphor-react"
 import { FaGoogle } from "react-icons/fa"
 
-import rifasIcon from "../assets/images/logo.svg"
+import rifasIcon from "../../assets/images/logo.svg"
 
-import { Input } from "../components/Global/Input"
-import { Button } from "../components/Global/Button"
-import { useAuth } from "../hooks/useAuth"
-import { ModalForgot } from "../components/Modals/ModalForgot"
+import { Input } from "../../components/Global/Input"
+import { Button } from "../../components/Global/Button"
+import { useAuth } from "../../hooks/useAuth"
+import { ModalForgot } from "../../components/Modals/ModalForgot"
 
 export function SignIn() {
   const navigate = useNavigate()

@@ -71,8 +71,8 @@ export function Profile() {
                   <PencilSimple size={16} weight="fill" />
                 </button>
               </div>
-              <div className="rounded-lift border-2 border-rifas-border-line border-dashed p-8 hover:border-white/30 transition-all cursor-pointer ">
-                <span className="flex items-center justify-center gap-2 text-white/30 text-sm">
+              <div className="rounded-lift border-2 border-rifas-border-line border-dashed p-8 hover:border-white/30 transition-colors duration-150 cursor-pointer group">
+                <span className="flex items-center justify-center gap-2 text-white/30 text-sm transition-colors duration-150 group-hover:text-white/50">
                   <Plus className="text-violet-500" size={20} />
                   Quem é você e o que faz?
                 </span>

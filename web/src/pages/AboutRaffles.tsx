@@ -1,4 +1,3 @@
-import * as Select from "@radix-ui/react-select"
 import { Article, Bank, ListNumbers, Phone, Plus } from "phosphor-react"
 import { Input } from "../components/Global/Input"
 import { Navbar } from "../components/Global/Navbar"
@@ -122,8 +121,8 @@ export function AboutRaffles() {
                 Aparência da rifa
               </h2>
               <form className="flex flex-col">
-                <div className="rounded-lift border-2 border-rifas-border-line border-dashed p-8 hover:border-white/30 transition-all cursor-pointer ">
-                  <span className="flex items-center justify-center gap-2 text-white/30 text-sm">
+                <div className="rounded-lift border-2 border-rifas-border-line border-dashed p-8 hover:border-white/30 transition-colors duration-150 cursor-pointer group">
+                  <span className="flex items-center justify-center gap-2 text-white/30 text-sm group-hover:text-white/50 transition-colors duration-150">
                     <Plus className="text-violet-500" size={20} /> Fazer upload
                     de imagem
                   </span>

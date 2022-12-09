@@ -29,7 +29,7 @@ export function PopoverProfile() {
           <Cookie weight="fill" className="min-w-[1.25rem] text-violet-500" />
         </Link>
         <a
-          href=""
+          href="/help"
           className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-zinc-900/30"
         >
           <span className="text-base ml-6">Central de ajuda</span>
