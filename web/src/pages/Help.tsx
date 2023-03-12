@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { MagnifyingGlass } from "phosphor-react"
 
-import rifasIcon from "../../assets/images/logo.svg"
+import rifasIcon from "../assets/images/logo.svg"
 
 export function Help() {
   return (

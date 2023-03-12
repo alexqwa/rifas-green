@@ -20,7 +20,7 @@ module.exports = {
 
       colors: {
         "rifas-blue": "#4863f7",
-        "rifas-border-line": "#29292e",
+        "rifas-border-line": "rgb(233, 235, 240)",
       },
     },
   },

@@ -6,7 +6,7 @@ const StyledTabs = styled(Tabs.Trigger, {
     borderBottomWidth: "3px",
     borderColor: "#8b5cf6",
     marginBottom: "-2px",
-    color: "#FFF",
+    color: "#8b5cf6",
     transition: "all 0.2s linear",
   },
   "&[data-state=inactive]": {

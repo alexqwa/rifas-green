@@ -30,11 +30,11 @@ export function Tab() {
       </Tabs.List>
 
       <Tabs.Content value="tab1" className="flex flex-col gap-4">
-        <h1 className="text-white font-bold text-3xl">
+        <h1 className="text-slate-600 font-bold text-3xl">
           Comece a utilizar nossa plataforma <br />
           para gerenciar suas rifas
         </h1>
-        <p className="text-white/90">
+        <p className="text-slate-500">
           Você vai encontrar as opções de adicionar afiliados, criar promoções,
           <br />
           mudar a aparência de sua rifa e receber seus pagamentos
@@ -48,10 +48,10 @@ export function Tab() {
         </button>
       </Tabs.Content>
       <Tabs.Content value="tab2" className="flex flex-col gap-4">
-        <h1 className="text-white font-bold text-3xl">
+        <h1 className="text-slate-600 font-bold text-3xl">
           Acesse todos os sorteios que estão <br /> rolando atualmente
         </h1>
-        <p className="text-white/90">
+        <p className="text-slate-500">
           Tenha acesso aos mais variados sorteios que estão
           <br /> rolando em nossa plataforma, entre agora e teste sua sorte{" "}
           <br />
@@ -65,15 +65,15 @@ export function Tab() {
         </button>
       </Tabs.Content>
       <Tabs.Content value="tab3" className="flex flex-col gap-4">
-        <h1 className="text-white font-bold text-3xl">
+        <h1 className="text-slate-600 font-bold text-3xl">
           As melhores rifas com os melhores <br />
           prêmios você só encontra aqui
         </h1>
-        <p className="text-white/90">
+        <p className="text-slate-500">
           Faça parte da nossa comunidade, fique avontade
           <br />
-          em usufruir das melhores rifas que nossos
-          <br /> usuários estão rifando!
+          em usufruir das melhores rifas que nossos usuários
+          <br /> estão rifando!
         </p>
         <button className="flex items-center justify-between px-10 rounded bg-red-500 hover:opacity-80 transition-opacity w-60 h-14 uppercase text-white text-sm font-bold">
           Quero conhecer

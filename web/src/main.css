@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-[#18181b];
+    @apply bg-[rgb(249,250,251)];
   }
 }
 

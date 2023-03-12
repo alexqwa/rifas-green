@@ -18,13 +18,13 @@ export function ModalForgot() {
   return (
     <Dialog.Portal>
       <StyledOverlay className="bg-black/60 inset-0 fixed z-[9999]" />
-      <StyledContent className="z-[9999] fixed py-8 px-10 bg-[#202024] w-[480px] rounded-lg shadow-black/25 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <StyledContent className="z-[9999] fixed py-8 px-10 bg-white border border-rifas-border-line w-[480px] rounded-lg shadow-black/25 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="flex items-center justify-between">
-          <Dialog.Title className="text-2xl font-bold text-white">
+          <Dialog.Title className="text-2xl font-bold text-slate-600">
             Esqueci minha senha
           </Dialog.Title>
           <Dialog.Close className="w-9 h-9 flex items-center justify-center hover:bg-rifas-border-line transition-colors rounded-[5px]">
-            <X size={20} className="text-white" />
+            <X size={20} className="text-slate-600" />
           </Dialog.Close>
         </div>
 
@@ -40,7 +40,7 @@ export function ModalForgot() {
             <PaperPlaneTilt
               size={16}
               weight="fill"
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
             />
           </Input>
           <Button type="submit" title="Recuperar" w="full" h="[50px]" />

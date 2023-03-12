@@ -12,32 +12,41 @@ export function PopoverProfile() {
 
   return (
     <Popover.Portal>
-      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-[rgb(32,32,36)] rounded-[5px] top-[calc(100%+22px)] shadow-lg">
-        <Popover.Arrow className="fill-[rgb(32,32,36)] absolute right-[calc(128px-31px)] w-4 h-2" />
-        <Link
-          to={`/dashboard/me/${user?.name}`}
-          className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-zinc-900/30"
-        >
-          <span className="text-base ml-6">Meu perfil</span>
-          <User weight="fill" className="min-w-[1.25rem] text-violet-500" />
-        </Link>
-        <Link
-          to="/dashboard/me/raffles"
-          className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-zinc-900/30"
-        >
-          <span className="text-base ml-6">Minhas rifas</span>
-          <Cookie weight="fill" className="min-w-[1.25rem] text-violet-500" />
-        </Link>
-        <a
-          href="/help"
-          className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-zinc-900/30"
-        >
-          <span className="text-base ml-6">Central de ajuda</span>
-          <Question weight="fill" className="min-w-[1.25rem] text-violet-500" />
-        </a>
+      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-white rounded-[5px] top-[calc(100%+22px)] shadow-lg ">
+        <Popover.Arrow className="fill-white absolute right-[calc(128px-31px)] w-4 h-2" />
+        <div className="overflow-hidden flex-1 rounded-lift">
+          <Link
+            to={`/dashboard/me/${user?.name}`}
+            className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30"
+          >
+            <span className="text-base ml-6 text-slate-500">Meu perfil</span>
+            <User weight="fill" className="min-w-[1.25rem] text-violet-500" />
+          </Link>
+          <Link
+            to="/dashboard/me/raffles"
+            className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30"
+          >
+            <span className="text-base ml-6 text-slate-500">Minhas rifas</span>
+            <Cookie weight="fill" className="min-w-[1.25rem] text-violet-500" />
+          </Link>
+          <a
+            href="/help"
+            className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30"
+          >
+            <span className="text-base ml-6 text-slate-500">
+              Central de ajuda
+            </span>
+            <Question
+              weight="fill"
+              className="min-w-[1.25rem] text-violet-500"
+            />
+          </a>
+        </div>
         <Dialog.Root>
-          <Dialog.Trigger className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-zinc-900/30">
-            <span className="text-base ml-6">Sair da plataforma</span>
+          <Dialog.Trigger className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30">
+            <span className="text-base ml-6 text-slate-500">
+              Sair da plataforma
+            </span>
             <XSquare
               weight="fill"
               className="min-w-[1.25rem] text-violet-500"

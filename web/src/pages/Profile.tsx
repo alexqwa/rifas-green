@@ -59,9 +59,6 @@ export function Profile() {
             <div className="bg-[rgb(32,32,36)] rounded-lift p-8">
               <h1 className="text-white font-bold text-2xl">Minha rede</h1>
             </div>
-            <div className="bg-[rgb(32,32,36)] rounded-lift p-8">
-              <h1 className="text-white font-bold text-2xl">Interesses</h1>
-            </div>
           </div>
           <main className="w-full space-y-6">
             <div className="rounded-lift bg-[rgb(32,32,36)] p-8">
