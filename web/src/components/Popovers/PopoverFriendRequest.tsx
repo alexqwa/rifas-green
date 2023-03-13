@@ -5,13 +5,13 @@ export function PopoverFriendRequest() {
   return (
     <Popover.Portal>
       <StyledContent className="block absolute w-[448px] right-[calc(100%-23px)] top-[calc(100%+25px)] shadow-lg">
-        <Popover.Arrow className="fill-[rgb(41,41,46)] absolute right-[calc(224px-31px)] w-4 h-2" />
-        <header className="flex items-center justify-between bg-[rgb(41,41,46)] h-[50px] px-5 rounded-tl-[5px] rounded-tr-[5px]">
+        <Popover.Arrow className="fill-slate-600 absolute right-[calc(224px-31px)] w-4 h-2" />
+        <header className="flex items-center justify-between bg-slate-600 h-[50px] px-5 rounded-tl-[5px] rounded-tr-[5px]">
           <span className="text-base font-bold text-white">
             Convites pendentes
           </span>
         </header>
-        <div className="flex flex-col bg-[rgb(32,32,36)] justify-center items-center h-40 w-full rounded-bl-[5px] rounded-br-[5px] text-[rgb(168,168,179)] text-sm">
+        <div className="flex flex-col bg-white justify-center items-center h-40 w-full rounded-bl-lift rounded-br-lift text-slate-500 text-sm ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="90"

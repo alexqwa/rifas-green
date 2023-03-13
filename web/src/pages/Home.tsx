@@ -22,7 +22,7 @@ export function Home() {
 
   return (
     <>
-      <header className="sticky left-0 top-0 py-6 border-b-[1px] backdrop-blur-md backdrop-saturate-[180%] bg-white/80 border-b-rifas-border-line z-[9998]">
+      <header className="sticky left-0 top-0 py-6 border-b backdrop-blur-md backdrop-saturate-[180%] bg-white/80 border-rifas-border-line z-[9998]">
         <div className="max-w-[1120px] m-auto flex items-center justify-between">
           <Link to="/">
             <img className="h-11" src={rifasIcon} alt="Rifas Green" />

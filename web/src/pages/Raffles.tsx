@@ -17,23 +17,25 @@ export function Raffles() {
       <Navbar />
       <div className="w-full max-w-[1152px] m-auto py-16">
         <div className="flex flex-col items-start">
-          <h1 className="text-white font-bold text-4xl mb-2">Minhas rifas</h1>
-          <p className="text-white/70 text-base mb-6">
+          <h1 className="text-slate-600 font-bold text-4xl mb-2">
+            Minhas rifas
+          </h1>
+          <p className="text-slate-500 text-base mb-6">
             Cadastre novas rifas ou edite
             <br />
             as que você possuí!
           </p>
         </div>
-        <div className="flex items-center justify-between bg-[#202024] w-full px-6 py-4 rounded-[5px]">
-          <div className="flex items-center gap-2">
-            <h1 className=" font-bold text-white text-base">Minhas rifas</h1>
-            <div className="bg-white h-1 w-1 rounded-[50%]" />
-            <p className="text-white/80 text-xs font-bold">
+        <div className="flex items-center justify-between bg-white border border-rifas-border-line w-full px-6 py-4 rounded-[5px]">
+          <div className="flex items-center justify-center gap-2">
+            <h1 className="font-bold text-slate-600 text-base">Minhas rifas</h1>
+            <div className="bg-slate-600 h-1 w-1 rounded-[50%]" />
+            <p className="text-slate-500 text-xs font-bold">
               {raffles.length} rifa(s) cadastradas
             </p>
           </div>
           <Dialog.Root>
-            <Dialog.Trigger className="text-white/70 hover:text-white flex items-center justify-center hover:bg-zinc-900 h-10 w-10 rounded-[5px] transition-colors">
+            <Dialog.Trigger className="text-slate-600 hover:text-white flex items-center justify-center hover:bg-slate-600 h-10 w-10 rounded-[5px] transition-colors">
               <PlusCircle size={24} weight="fill" />
             </Dialog.Trigger>
             <ModalCreate />

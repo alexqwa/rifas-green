@@ -9,18 +9,18 @@ export function PopoverNotification() {
   return (
     <Popover.Portal>
       <StyledContent className="block absolute w-[448px] right-[calc(100%-23px)] top-[calc(100%+25px)] shadow-lg">
-        <Popover.Arrow className="fill-[rgb(41,41,46)] absolute right-[calc(224px-31px)] w-4 h-2" />
-        <header className="flex items-center justify-between bg-[rgb(41,41,46)] h-[50px] px-5 rounded-tl-[5px] rounded-tr-[5px]">
+        <Popover.Arrow className="fill-slate-600 absolute right-[calc(224px-31px)] w-4 h-2" />
+        <header className="flex items-center justify-between bg-slate-600 h-[50px] px-5 rounded-tl-[5px] rounded-tr-[5px]">
           <span className="text-base text-white font-bold">Notificações</span>
           <button
-            className="uppercase text-xs font-bold text-violet-500/80 transition-colors hover:text-violet-500"
+            className="uppercase text-xs font-bold text-white transition-colors hover:text-white/50"
             type="button"
           >
             Marcar todas como lidas
           </button>
         </header>
-        <div className="bg-[rgb(18,18,20)]">
-          <h4 className="text-sm font-normal text-white/70 py-2 px-5">
+        <div className="bg-white">
+          <h4 className="text-sm font-normal text-slate-500 py-2 px-5">
             Antigas
           </h4>
 
@@ -37,7 +37,7 @@ export function PopoverNotification() {
           </div>
         </div>
         <a
-          className="flex items-center justify-center w-full h-10 text-center text-xs font-bold uppercase text-violet-500/80 rounded-bl-[5px] rounded-br-[5px] bg-[rgb(41,41,46)] hover:text-violet-500 transition-colors"
+          className="flex items-center justify-center w-full h-10 text-center text-xs font-bold uppercase text-white rounded-bl-[5px] rounded-br-[5px] bg-slate-600 hover:text-white/80 transition-colors"
           href="#"
         >
           Ver todas

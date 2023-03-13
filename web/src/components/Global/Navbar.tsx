@@ -12,7 +12,7 @@ export function Navbar() {
   const { user } = useAuth()
 
   return (
-    <div className="sticky top-0 flex items-center z-[9998] justify-between px-8 h-[76px] backdrop-blur-md backdrop-saturate-[180%] bg-white border-b border-rifas-border-line">
+    <div className="sticky top-0 flex items-center z-[9998] justify-between px-8 h-[76px] backdrop-blur-md backdrop-saturate-[180%] bg-white/80 border-b border-rifas-border-line">
       <div className="flex items-center">
         <Link className="flex" to="/dashboard">
           <img className="h-9" src={rifasIcon} alt="Rifas Green" />

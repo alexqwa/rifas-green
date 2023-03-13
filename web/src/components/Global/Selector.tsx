@@ -10,11 +10,11 @@ import { SelectionAll } from "phosphor-react"
 export function Selector() {
   return (
     <Select.Root>
-      <StyledTrigger className="relative outline-none flex items-center text-white/70 text-sm box-content bg-zinc-900 h-[50px] border-2 border-rifas-border-line rounded-lift pr-[1em] pl-11">
+      <StyledTrigger className="relative flex items-center text-slate-500 text-sm box-content bg-[rgb(249,250,251)] h-[50px] border border-rifas-border-line rounded-lift pr-[1em] pl-11">
         <SelectionAll
           size={16}
           weight="fill"
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30"
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
         />
 
         <div className="flex items-center justify-between w-full">
@@ -23,7 +23,7 @@ export function Selector() {
             className="text-white"
           />
           <Select.Icon>
-            <StyledChevron />
+            <StyledChevron className="text-slate-500" />
           </Select.Icon>
         </div>
       </StyledTrigger>
