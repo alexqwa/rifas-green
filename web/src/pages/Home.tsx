@@ -12,6 +12,7 @@ import {
 } from "phosphor-react"
 
 import rifasIcon from "../assets/images/logo.svg"
+import homeDesktopIcon from "../assets/images/home-desktop.png"
 
 import { Tab } from "../components/Tab"
 import { Footer } from "../components/Global/Footer"
@@ -45,7 +46,31 @@ export function Home() {
         </div>
       </header>
       <main className="my-24">
-        <section className="max-w-[1120px] m-auto flex flex-col items-start">
+        <section className="max-w-[1120px] m-auto flex flex-row">
+          <div className="flex flex-col items-start">
+            <h1 className="text-6xl text-slate-600 font-bold">
+              Crie sua rifa online em
+              <br />
+              questão de minutos.
+            </h1>
+            <p className="text-slate-500 font-normal text-xl mt-6">
+              Alcance um público maior e aumente
+              <br /> suas chances de sucesso através do Rifas Green.
+            </p>
+            <button
+              onClick={() => navigate("/dashboard/me/raffles")}
+              className="bg-green-500 rounded-lift px-10 py-4 text-white text-base mt-4 hover:bg-green-500/80 transition-all"
+            >
+              Criar minhas rifas
+            </button>
+          </div>
+          <img
+            className="h-80 mt-10"
+            src={homeDesktopIcon}
+            alt="Home Desktop"
+          />
+        </section>
+        <section className="max-w-[1120px] m-auto flex flex-col items-start mt-20">
           <h1 className="font-bold text-slate-600 text-5xl leading-tight mb-16">
             Somos uma plataforma completa de <br /> vendas e gerenciamento de
             rifas

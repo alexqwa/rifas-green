@@ -108,7 +108,7 @@ export function AboutRaffles() {
             </section>
 
             <section className="bg-white border border-rifas-border-line p-8 rounded-lift">
-              <h2 className="font-bold text-white text-2xl mb-8">
+              <h2 className="font-bold text-slate-600 text-2xl mb-8">
                 Meios de pagamento
               </h2>
               <form className="flex flex-col">
@@ -120,12 +120,12 @@ export function AboutRaffles() {
             </section>
 
             <section className="bg-white border border-rifas-border-line p-8 rounded-lift">
-              <h2 className="font-bold text-white text-2xl mb-8">
+              <h2 className="font-bold text-slate-600 text-2xl mb-8">
                 Aparência da rifa
               </h2>
               <form className="flex flex-col">
-                <div className="rounded-lift border-2 border-rifas-border-line border-dashed p-8 hover:border-white/30 transition-colors duration-150 cursor-pointer group">
-                  <span className="flex items-center justify-center gap-2 text-slate-500 group-focus-within:text-violet-500 text-sm group-hover:text-white/50 transition-colors duration-150">
+                <div className="rounded-lift border-2 border-slate-300/80 border-dashed p-8 hover:border-slate-500/80 transition-colors duration-150 cursor-pointer group">
+                  <span className="flex items-center justify-center gap-2 text-slate-500/80 group-focus-within:text-violet-500 text-sm group-hover:text-slate-500 transition-colors duration-150">
                     <Plus className="text-violet-500" size={20} /> Fazer upload
                     de imagem
                   </span>
