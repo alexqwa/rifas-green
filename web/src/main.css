@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-[rgb(249,250,251)];
+    @apply bg-slate-300/30;
   }
 }
 

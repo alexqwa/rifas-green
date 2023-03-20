@@ -1,0 +1,14 @@
+overwrite: true
+
+schema: "https://api-sa-east-1.hygraph.com/v2/clfg5smrz01dr01uif2ih6prd/master"
+
+documents: "./src/graphql/**/*.graphql"
+
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-urql"
+    config:
+      withHooks: true

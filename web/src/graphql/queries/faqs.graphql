@@ -1,0 +1,7 @@
+query Faqs {
+  faqs {
+    id
+    title
+    description
+  }
+}

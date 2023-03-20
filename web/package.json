@@ -19,6 +19,7 @@
     "@radix-ui/react-tabs": "^1.0.3",
     "@stitches/react": "^1.2.8",
     "firebase": "^9.12.1",
+    "graphql": "^16.6.0",
     "imask": "^6.4.3",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
@@ -26,9 +27,15 @@
     "react-icons": "^4.6.0",
     "react-imask": "^6.4.3",
     "react-router-dom": "^6.4.2",
-    "react-toastify": "^9.1.1"
+    "react-toastify": "^9.1.1",
+    "urql": "^3.0.4"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^3.2.2",
+    "@graphql-codegen/import-types-preset": "^2.2.6",
+    "@graphql-codegen/typescript": "^3.0.2",
+    "@graphql-codegen/typescript-operations": "^3.0.2",
+    "@graphql-codegen/typescript-urql": "^3.7.3",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",

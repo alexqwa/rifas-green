@@ -6,8 +6,8 @@ import {
 } from "../../stitches/stitchesAccordion"
 
 interface AccordionItemProps extends Accordion.AccordionItemProps {
-  title: string
-  description: string
+  title: string | undefined
+  description: string | undefined
 }
 
 export function AccordionItem({
