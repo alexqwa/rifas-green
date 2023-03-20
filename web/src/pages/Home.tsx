@@ -1,5 +1,6 @@
 import * as Accordion from "@radix-ui/react-accordion"
 import { AccordionItem } from "../components/Accordion/AccordionItem"
+import homeDesktopIcon from "../assets/images/home-desktop.png"
 
 import { Tab } from "../components/Tab"
 import { Footer } from "../components/Global/Footer"
