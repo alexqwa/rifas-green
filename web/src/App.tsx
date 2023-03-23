@@ -9,6 +9,7 @@ import { Raffles } from "./pages/Raffles"
 import { Profile } from "./pages/Profile"
 import { Dashboard } from "./pages/Dashboard"
 import { AboutRaffles } from "./pages/AboutRaffles"
+import { RecentRaffles } from "./pages/RecentRaffles"
 
 import { AuthContextProvider } from "./contexts/AuthContext"
 import { client } from "./lib/urql"
@@ -24,6 +25,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/raffles" element={<RecentRaffles />} />
             <Route path="/dashboard/me/raffles" element={<Raffles />} />
             <Route
               path="/dashboard/me/raffles/:id"

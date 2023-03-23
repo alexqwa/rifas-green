@@ -25,7 +25,7 @@ export function Profile() {
                     alt={user?.name}
                   />
                 </span>
-                <h1 className="text-slate-500 text-2xl font-bold text-center">
+                <h1 className="text-slate-600 text-2xl font-bold text-center">
                   {user?.name}
                 </h1>
               </header>
@@ -42,7 +42,7 @@ export function Profile() {
                 </HoverCard.Trigger>
                 <HoverCard.Portal>
                   <StyledContent className="w-[264px] py-2 px-[21px] text-center bg-white border border-rifas-border-line rounded-lift">
-                    <h5 className="text-sm font-bold mb-2 text-slate-500">
+                    <h5 className="text-sm font-bold mb-2 text-slate-600">
                       Nível do perfil
                     </h5>
                     <p className="text-sm m-0 text-[rgb(168,168,179)]">

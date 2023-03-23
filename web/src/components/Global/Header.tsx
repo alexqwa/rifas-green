@@ -21,7 +21,7 @@ export function Header() {
               Preços
             </Link>
             <Link
-              to="#"
+              to="/raffles"
               className="text-slate-500 text-sm uppercase font-bold no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
             >
               Rifas Recentes

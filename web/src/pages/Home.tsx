@@ -1,19 +1,16 @@
-import * as Accordion from "@radix-ui/react-accordion"
-import { AccordionItem } from "../components/Accordion/AccordionItem"
-import homeDesktopIcon from "../assets/images/home-desktop.png"
+import { useNavigate } from "react-router-dom"
 
 import { Tab } from "../components/Tab"
+import { ChooseUs } from "../components/ChooseUs"
 import { Footer } from "../components/Global/Footer"
 import { Header } from "../components/Global/Header"
+import { AccordionQuestions } from "../components/Accordion/AccordionQuestions"
 
 import moneyFaceImg from "../assets/images/money-face.png"
 import homeDesktopImg from "../assets/images/home-desktop.png"
 
-import { ChooseUs } from "../components/ChooseUs"
-import { useFaqsQuery } from "../generated/graphql"
-
 export function Home() {
-  const [{ data }] = useFaqsQuery()
+  const navigate = useNavigate()
 
   return (
     <>
@@ -32,7 +29,10 @@ export function Home() {
                 <br />
                 chances de sucesso através do Rifei.
               </p>
-              <button className="bg-green-500 rounded-lift px-8 py-4 text-white hover:bg-green-500/80 transition-all mt-9">
+              <button
+                onClick={() => navigate("/dashboard/me/raffles")}
+                className="bg-green-500 rounded-lift px-8 py-4 text-white hover:bg-green-500/80 transition-all mt-9"
+              >
                 Criar minha rifa
               </button>
             </aside>
@@ -62,7 +62,10 @@ export function Home() {
               Todo o dinheiro que você arrecadar vai diretamente para a sua
               conta bancária!
             </p>
-            <button className="bg-green-500 rounded-lift px-8 py-4 text-white hover:bg-green-500/80 transition-all mt-6">
+            <button
+              onClick={() => navigate("/dashboard/me/raffles")}
+              className="bg-green-500 rounded-lift px-8 py-4 text-white hover:bg-green-500/80 transition-all mt-6"
+            >
               Criar minha rifa
             </button>
           </div>
@@ -73,22 +76,10 @@ export function Home() {
           <h1 className="text-black text-5xl font-bold self-start mb-10 relative w-fit after:content-[''] after:mt-3 after:absolute after:left-0 after:-bottom-2 after:w-[70%] after:h-[2px] after:bg-gradient-to-r after:from-violet-500 after:to-transparent">
             Dúvidas frequentes
           </h1>
-          <Accordion.Root
-            type="single"
-            collapsible
-            className="grid grid-cols-2 gap-6 w-full"
-          >
-            {data?.faqs.map((faq) => {
-              return (
-                <AccordionItem
-                  key={faq.id}
-                  value={faq.id}
-                  title={faq.title!}
-                  description={faq.description!}
-                />
-              )
-            })}
-          </Accordion.Root>
+          <div className="grid grid-cols-2 gap-4 w-full">
+            <AccordionQuestions from={0} to={3} />
+            <AccordionQuestions from={3} to={6} />
+          </div>
         </section>
       </main>
 

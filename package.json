@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@radix-ui/colors": "^0.1.8"
+  }
+}
