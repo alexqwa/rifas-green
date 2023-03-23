@@ -10,6 +10,7 @@
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-accordion": "^1.0.1",
     "@radix-ui/react-dialog": "^1.0.2",
     "@radix-ui/react-hover-card": "^1.0.2",
