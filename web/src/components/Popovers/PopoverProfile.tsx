@@ -16,7 +16,7 @@ export function PopoverProfile() {
         <Popover.Arrow className="fill-white absolute right-[calc(128px-31px)] w-4 h-2" />
         <div className="overflow-hidden flex-1 rounded-lift">
           <Link
-            to={`/dashboard/me/${user?.name}`}
+            to="/account"
             className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30"
           >
             <span className="text-base ml-6 text-slate-500">Meu perfil</span>

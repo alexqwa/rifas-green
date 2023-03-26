@@ -1,55 +1,55 @@
-import { Link } from "react-router-dom"
-import * as Popover from "@radix-ui/react-popover"
-import { BellSimple, MagnifyingGlass, UserCirclePlus } from "phosphor-react"
-import { PopoverFriendRequest } from "../Popovers/PopoverFriendRequest"
-import { PopoverNotification } from "../Popovers/PopoverNotification"
-import { PopoverProfile } from "../Popovers/PopoverProfile"
-import { useAuth } from "../../hooks/useAuth"
+import { User } from "phosphor-react"
+import { Link, useNavigate } from "react-router-dom"
 
 import rifasIcon from "../../assets/images/logo.svg"
 
 export function Navbar() {
-  const { user } = useAuth()
+  const navigate = useNavigate()
 
   return (
-    <div className="sticky top-0 flex items-center z-[9998] justify-between px-8 h-[76px] backdrop-blur-md backdrop-saturate-[180%] bg-white/80 border-b border-rifas-border-line">
-      <div className="flex items-center">
-        <Link className="flex" to="/dashboard">
-          <img className="h-9" src={rifasIcon} alt="Rifas Green" />
+    <header className="sticky left-0 top-0 py-6 border-b backdrop-blur-md backdrop-saturate-[180%] bg-white/80 border-rifas-border-line z-[9998]">
+      <div className="relative max-w-[1120px] m-auto flex items-center justify-between">
+        <Link to="/">
+          <img className="h-11" src={rifasIcon} alt="Rifas Green" />
         </Link>
+        <div className="flex items-center justify-center">
+          <ul className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center gap-6">
+            <Link
+              to="#"
+              className="text-slate-500 text-sm uppercase font-bold no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+            >
+              Preços
+            </Link>
+            <Link
+              to="/raffles"
+              className="text-slate-500 text-sm uppercase font-bold no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+            >
+              Rifas Recentes
+            </Link>
+            <Link
+              to="/help"
+              className="text-slate-500 text-sm uppercase font-bold no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
+            >
+              Ajuda
+            </Link>
+          </ul>
+        </div>
+        <div className="flex items-center gap-4">
+          <Link
+            to="/signin"
+            className="flex items-center gap-2 uppercase font-bold text-violet-500 text-xs px-6 py-3"
+          >
+            <User size={16} color="#835afd" />
+            Entrar
+          </Link>
+          <button
+            onClick={() => navigate("/signup")}
+            className="rounded-[5px] flex items-center hover:text-white hover:bg-violet-500 transition-colors uppercase border-[1px] border-violet-500 text-xs text-violet-500 px-6 py-3 font-bold"
+          >
+            Criar Conta
+          </button>
+        </div>
       </div>
-
-      <div className="flex flex-1 gap-2 items-center justify-end">
-        <button className="w-[46px] h-[46px] text-slate-600 hover:text-violet-500 flex items-center justify-center transition-colors">
-          <MagnifyingGlass size={24} />
-        </button>
-        <Popover.Root>
-          <Popover.Trigger className="w-[46px] h-[46px] text-slate-600 hover:text-violet-500 flex items-center justify-center hover:first:stroke-blue-500 transition-colors">
-            <UserCirclePlus size={24} weight="fill" />
-          </Popover.Trigger>
-          <PopoverFriendRequest />
-        </Popover.Root>
-
-        <Popover.Root>
-          <Popover.Trigger className="w-[46px] h-[46px] text-slate-600 hover:text-violet-500 flex items-center justify-center hover:first:text-white transition-colors">
-            <BellSimple size={24} weight="fill" />
-          </Popover.Trigger>
-          <PopoverNotification />
-        </Popover.Root>
-
-        <Popover.Root>
-          <Popover.Trigger className="flex items-center ml-2">
-            <div className="max-w-[3.25rem] max-h-[3.25rem] relative shrink-0">
-              <img
-                className="border-2 border-slate-500/80 w-full h-full max-w-full max-h-full p-[2px] rounded-[100%] bg-clip-content bg-cover"
-                src={`https://ui-avatars.com/api/?size=128&background=5B4699&color=fff&name=${user?.name}`}
-                alt={user?.name}
-              />
-            </div>
-          </Popover.Trigger>
-          <PopoverProfile />
-        </Popover.Root>
-      </div>
-    </div>
+    </header>
   )
 }

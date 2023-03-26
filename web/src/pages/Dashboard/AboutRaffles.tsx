@@ -1,9 +1,9 @@
 import { Article, Bank, ListNumbers, Phone, Plus } from "phosphor-react"
 
-import { Input } from "../components/Global/Input"
-import { Navbar } from "../components/Global/Navbar"
-import { Selector } from "../components/Global/Selector"
-import { Tab } from "../components/Tab"
+import { Input } from "../../components/Global/Input"
+import { Navbar } from "../../components/Dashboard/Navbar"
+import { Selector } from "../../components/Global/Selector"
+import { Tab } from "../../components/Tab"
 
 export function AboutRaffles() {
   return (

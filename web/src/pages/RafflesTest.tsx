@@ -4,11 +4,11 @@ import { PlusCircle } from "phosphor-react"
 
 import { useRaffle } from "../hooks/useRaffle"
 
-import { Navbar } from "../components/Global/Navbar"
+import { Navbar } from "../components/Dashboard/Navbar"
 import { RaffleCard } from "../components/RaffleCard"
 import { ModalCreate } from "../components/Modals/ModalCreate"
 
-export function Raffles() {
+export function RafflesTest() {
   const { raffles } = useRaffle()
   const navigate = useNavigate()
 

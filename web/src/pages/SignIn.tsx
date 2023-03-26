@@ -27,7 +27,7 @@ export function SignIn() {
       await signInWithGoogle()
     }
 
-    navigate("/dashboard")
+    navigate("/raffles")
   }
 
   return (

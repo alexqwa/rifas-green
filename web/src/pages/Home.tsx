@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { Tab } from "../components/Tab"
 import { ChooseUs } from "../components/ChooseUs"
 import { Footer } from "../components/Global/Footer"
-import { Header } from "../components/Global/Header"
+import { Navbar } from "../components/Global/Navbar"
 import { AccordionQuestions } from "../components/Accordion/AccordionQuestions"
 
 import moneyFaceImg from "../assets/images/money-face.png"
@@ -14,7 +14,7 @@ export function Home() {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <main className="mb-24">
         <section className="bg-white py-20">
           <div className="relative max-w-[1120px] m-auto flex flex-row">
