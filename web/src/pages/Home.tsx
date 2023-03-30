@@ -27,10 +27,10 @@ export function Home() {
               <p className="text-lg opacity-80">
                 Alcance um público maior e aumente suas
                 <br />
-                chances de sucesso através do Rifei.
+                chances de sucesso através do Rifas Green.
               </p>
               <button
-                onClick={() => navigate("/dashboard/me/raffles")}
+                onClick={() => navigate("/raffles")}
                 className="bg-green-500 rounded-lift px-8 py-4 text-white hover:bg-green-500/80 transition-all mt-9"
               >
                 Criar minha rifa
@@ -63,7 +63,7 @@ export function Home() {
               conta bancária!
             </p>
             <button
-              onClick={() => navigate("/dashboard/me/raffles")}
+              onClick={() => navigate("/raffles")}
               className="bg-green-500 rounded-lift px-8 py-4 text-white hover:bg-green-500/80 transition-all mt-6"
             >
               Criar minha rifa

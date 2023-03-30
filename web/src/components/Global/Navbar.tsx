@@ -12,28 +12,7 @@ export function Navbar() {
         <Link to="/">
           <img className="h-11" src={rifasIcon} alt="Rifas Green" />
         </Link>
-        <div className="flex items-center justify-center">
-          <ul className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center gap-6">
-            <Link
-              to="#"
-              className="text-slate-500 text-sm uppercase font-bold no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
-            >
-              Preços
-            </Link>
-            <Link
-              to="/raffles"
-              className="text-slate-500 text-sm uppercase font-bold no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
-            >
-              Rifas Recentes
-            </Link>
-            <Link
-              to="/help"
-              className="text-slate-500 text-sm uppercase font-bold no-underline relative w-fit before:content-[''] before:absolute before:-bottom-[2px] before:w-0 before:right-0 before:h-[2px] before:transition-all before:bg-violet-500 hover:before:left-0 hover:before:right-0 hover:before:w-full"
-            >
-              Ajuda
-            </Link>
-          </ul>
-        </div>
+
         <div className="flex items-center gap-4">
           <Link
             to="/signin"

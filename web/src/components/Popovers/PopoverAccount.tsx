@@ -1,46 +1,39 @@
 import { Link } from "react-router-dom"
 import * as Popover from "@radix-ui/react-popover"
+import { Question, XSquare, Gear } from "phosphor-react"
 import * as Dialog from "@radix-ui/react-dialog"
-import { useAuth } from "../../hooks/useAuth"
 
+import { useAuth } from "../../hooks/useAuth"
 import { ModalExit } from "../Modals/ModalExit"
 import { StyledContent } from "../../stitches/stitchesPopover"
-import { User, Cookie, Question, XSquare } from "phosphor-react"
 
-export function PopoverProfile() {
+export function PopoverAccount() {
   const { user } = useAuth()
 
   return (
     <Popover.Portal>
-      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-white rounded-[5px] top-[calc(100%+22px)] shadow-lg ">
+      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-white rounded-[5px] top-[calc(100%+22px)] shadow-lg">
         <Popover.Arrow className="fill-white absolute right-[calc(128px-31px)] w-4 h-2" />
         <div className="overflow-hidden flex-1 rounded-lift">
           <Link
             to="/account"
             className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30"
           >
-            <span className="text-base ml-6 text-slate-500">Meu perfil</span>
-            <User weight="fill" className="min-w-[1.25rem] text-violet-500" />
+            <span className="text-base ml-6 text-slate-500">Configurações</span>
+            <Gear weight="fill" className="min-w-[1.25rem] text-violet-500" />
           </Link>
           <Link
-            to="/dashboard/me/raffles"
-            className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30"
-          >
-            <span className="text-base ml-6 text-slate-500">Minhas rifas</span>
-            <Cookie weight="fill" className="min-w-[1.25rem] text-violet-500" />
-          </Link>
-          <a
-            href="/help"
+            to="/help"
             className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30"
           >
             <span className="text-base ml-6 text-slate-500">
-              Central de ajuda
+              Suporte técnico
             </span>
             <Question
               weight="fill"
               className="min-w-[1.25rem] text-violet-500"
             />
-          </a>
+          </Link>
         </div>
         <Dialog.Root>
           <Dialog.Trigger className="flex flex-row-reverse justify-end items-center text-base text-white/80 py-3 px-6 transition-colors w-full hover:bg-slate-300/30">

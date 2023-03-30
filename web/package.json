@@ -19,6 +19,7 @@
     "@radix-ui/react-select": "^1.1.1",
     "@radix-ui/react-tabs": "^1.0.3",
     "@stitches/react": "^1.2.8",
+    "@types/react-input-mask": "^3.0.2",
     "firebase": "^9.12.1",
     "graphql": "^16.6.0",
     "imask": "^6.4.3",
@@ -27,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-imask": "^6.4.3",
+    "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.4.2",
     "react-toastify": "^9.1.1",
     "urql": "^3.0.4"

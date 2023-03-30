@@ -11,7 +11,7 @@ export function Raffles() {
       <Navbar />
       <div className="w-full max-w-[1120px] m-auto py-16">
         <header className="w-full mb-14">
-          <h1 className="text-black font-bold text-5xl mb-4">Rifas</h1>
+          <h1 className="text-black font-bold text-5xl mb-4">Campanhas</h1>
           <div className="flex flex-row items-center gap-2 max-h-12">
             <div className="relative flex-1 w-full h-12">
               <input
@@ -37,7 +37,7 @@ export function Raffles() {
               className="bg-green-500 h-12 px-5 text-sm text-white rounded-xl flex items-center justify-center gap-3 hover:bg-green-600 transition-all"
             >
               <Plus size={20} />
-              Nova rifa
+              Nova campanha
             </button>
           </div>
         </header>
