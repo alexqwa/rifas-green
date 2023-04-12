@@ -13,7 +13,7 @@ export function AccordionQuestions({ from, to }: AccordionQuestionsProps) {
 
   return (
     <Accordion.Root className="rounded-md divide-y-[1px]" type="multiple">
-      {data?.faqs.slice(from, to).map((faq, index) => {
+      {data?.faqs.slice(from, to).map((faq) => {
         return (
           <Accordion.Item
             className="overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10"

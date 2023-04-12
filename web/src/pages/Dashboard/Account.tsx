@@ -11,8 +11,13 @@ import * as Tabs from "@radix-ui/react-tabs"
 
 import { Navbar } from "../../components/Dashboard/Navbar"
 import { MaskedInput } from "../../components/MaskedInput"
+import { NotificationItem } from "../../components/Dashboard/NotificationItem"
+
+import { useNotificationQuery } from "../../generated/graphql"
 
 export function Account() {
+  const [{ data }] = useNotificationQuery()
+
   function handleUp() {
     window.scrollTo(0, 0)
   }
@@ -196,11 +201,13 @@ export function Account() {
                 </div>
               </div>
               <div className="relative p-8">
-                <h1 className="relative block text-[26px] font-bold mb-8 text-black">
+                <h1 className="relative block text-[26px] font-bold mb-2 text-black">
                   Excluir conta
                 </h1>
-                <small className="block font-bold uppercase mb-3">
-                  O que você tem que saber:
+                <small className="block text-sm mb-8">
+                  O que você tem que saber
+                  <br />
+                  sobre a exclusão de sua conta
                 </small>
                 <div className="relative bg-white border-rifas-line p-5 rounded-xl mb-8">
                   <small>
@@ -209,16 +216,16 @@ export function Account() {
                     conta por questões de segurança, sendo possível recuperá-la
                     entrando em contato conosco.
                   </small>
-                  <hr className="relative border-dashed w-full my-[15px] border-slate-500" />
+                  <hr className="relative border-dashed w-full my-[15px] border-slate-500/50" />
                   <small>
                     A sua conta será removida permanentemente, junto com todos
                     os dados relacionados a ela, como campanhas, rifinhas,
                     pedidos e afiliados associados.
                   </small>
                 </div>
-                <div className="relative flex items-center mt-12">
+                <div className="relative flex items-center mt-2">
                   <button className="relative flex items-center justify-center font-medium text-sm bg-red-500 text-white rounded-xl py-3 px-6 hover:bg-red-500/80 transition-all">
-                    Excluir
+                    Excluir conta
                   </button>
                 </div>
               </div>
@@ -335,6 +342,12 @@ export function Account() {
                 <h1 className="relative block text-[26px] font-bold mb-8 text-black ">
                   Compras
                 </h1>
+                <div className="relative w-full bg-white border-rifas-line rounded-xl p-8 flex flex-col items-center justify-center">
+                  <h1 className="text-6xl mb-4">😢</h1>
+                  <span className="text-base text-slate-500">
+                    Você ainda não possui nenhuma compra!
+                  </span>
+                </div>
               </div>
             </Tabs.Content>
             <Tabs.Content
@@ -355,6 +368,18 @@ export function Account() {
                 <h1 className="relative block text-[26px] font-bold mb-8 text-black ">
                   Notificações
                 </h1>
+                <div className="flex flex-col divide-y-[1px] border border-rifas-line">
+                  {data?.notifications.map((notification) => {
+                    return (
+                      <NotificationItem
+                        key={notification.id}
+                        title={notification.title}
+                        date={notification.date}
+                        url={notification.slug}
+                      />
+                    )
+                  })}
+                </div>
               </div>
             </Tabs.Content>
             <Tabs.Content

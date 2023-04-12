@@ -13,7 +13,7 @@ export function Navbar() {
 
   return (
     <header className="relative z-40 h-[85px]">
-      <div className="fixed flex items-center justify-center top-0 left-0 right-0 bg-[rgba(255,255,255,0.8)] border-b border-[rgb(233,233,233)] backdrop-blur-[20px] backdrop-saturate-100">
+      <div className="fixed flex items-center justify-center top-0 left-0 right-0 bg-white/80 border-b border-rifas-line backdrop-blur-[20px] backdrop-saturate-100">
         <div className="h-[85px] items-center w-[1120px] flex justify-between">
           <Link to="/raffles">
             <img className="h-9" src={rifasIcon} alt="Rifas Green" />

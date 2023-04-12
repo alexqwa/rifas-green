@@ -7,7 +7,7 @@ import rifasIcon from "../assets/images/logo.svg"
 export function Help() {
   return (
     <>
-      <header className="sticky left-0 top-0 py-6 border-b-[1px] backdrop-blur-md backdrop-saturate-[180%] bg-zinc-900/80 border-rifas-border-line z-[9998]">
+      <header className="sticky left-0 top-0 py-6 border-b-[1px] backdrop-blur-md backdrop-saturate-[180%] bg-white/80 border-rifas-border-line z-[9998]">
         <div className="max-w-[1120px] m-auto flex items-center justify-between">
           <Link to="/">
             <img className="h-11" src={rifasIcon} alt="Rifas Green" />
@@ -21,9 +21,7 @@ export function Help() {
       </header>
       <main className="max-w-[1122px] m-auto my-24 px-6">
         <section className="flex flex-col items-center justify-center mb-20">
-          <h1 className="text-[54px] text-white/80 font-bold">
-            Central de Ajuda
-          </h1>
+          <h1 className="text-[54px] text-black font-bold">Central de Ajuda</h1>
           <form className="flex items-center justify-center mt-10">
             <input
               className="bg-[#09090A] h-[65px] rounded-tl-lift rounded-bl-lift outline-none text-white text-lg w-[700px] px-5"
@@ -134,7 +132,7 @@ export function Help() {
           <h2 className="font-bold text-white text-4xl">Atividade recente</h2>
         </section>
       </main>
-      <footer className="flex flex-1 justify-center bg-[#202024]">
+      <footer className="flex flex-1 justify-center bg-white">
         <div className="max-w-[1122px] m-auto px-6 h-20 flex flex-1 justify-between items-center">
           <div>
             <img className="h-11" src={rifasIcon} alt="Rifas Green" />
@@ -142,19 +140,19 @@ export function Help() {
           <div className="space-x-[30px]">
             <a
               href="#"
-              className="text-[#E1E1E6] no-underline hover:underline text-[15px]"
+              className="text-slate-500 no-underline hover:underline text-[15px]"
             >
               Direitos autorais
             </a>
             <a
               href="#"
-              className="text-[#E1E1E6] no-underline hover:underline text-[15px]"
+              className="text-slate-500 no-underline hover:underline text-[15px]"
             >
               Termos de uso
             </a>
             <a
               href="#"
-              className="text-[#E1E1E6] no-underline hover:underline text-[15px]"
+              className="text-slate-500 no-underline hover:underline text-[15px]"
             >
               Políticas de privacidade
             </a>

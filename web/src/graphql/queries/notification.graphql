@@ -1,0 +1,8 @@
+query Notification {
+  notifications(orderBy: createdAt_DESC) {
+    title
+    slug
+    date
+    id
+  }
+}
