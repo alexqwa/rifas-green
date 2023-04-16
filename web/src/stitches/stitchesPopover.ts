@@ -2,13 +2,13 @@ import * as Popover from "@radix-ui/react-popover"
 import { keyframes, styled } from "@stitches/react"
 
 const fadeIn = keyframes({
-  "0%": { opacity: 0 },
-  "100%": { opacity: 1 },
+  "0%": { opacity: 0, transform: "translateY(-30px)" },
+  "100%": { opacity: 1, transform: "translateY(0px)" },
 })
 
 const fadeOut = keyframes({
-  "0%": { opacity: 1 },
-  "100%": { opacity: 0 },
+  "0%": { opacity: 1, transform: "translateY(0px)" },
+  "100%": { opacity: 0, transform: "translateY(-30px)" },
 })
 const StyledContent = styled(Popover.Content, {
   "&[data-state=open]": {

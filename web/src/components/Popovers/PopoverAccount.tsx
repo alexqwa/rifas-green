@@ -12,7 +12,7 @@ export function PopoverAccount() {
 
   return (
     <Popover.Portal>
-      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-white rounded-[5px] top-[calc(100%+22px)] shadow-lg">
+      <StyledContent className="absolute right-[calc(100%-26px)] w-64 bg-white rounded-[5px] top-[calc(100%+30px)] shadow-lg">
         <Popover.Arrow className="fill-white absolute right-[calc(128px-31px)] w-4 h-2" />
         <div className="overflow-hidden flex-1 rounded-lift">
           <Link

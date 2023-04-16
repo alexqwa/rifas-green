@@ -248,7 +248,6 @@ export function Account() {
                         <div className="relative w-full flex items-center">
                           <MaskedInput
                             mask="99999-999"
-                            placeholder="00000-000"
                             className="hover:border-violet-500 flex items-center justify-between w-full min-h-[50px] bg-slate-300/50 border border-rifas-line rounded-xl py-[10px] px-4 text-slate-500 text-sm font-normal outline-none focus:border-violet-500 transition-all"
                           />
                         </div>
@@ -368,7 +367,7 @@ export function Account() {
                 <h1 className="relative block text-[26px] font-bold mb-8 text-black ">
                   Notificações
                 </h1>
-                <div className="flex flex-col divide-y-[1px] border border-rifas-line">
+                <div className="flex flex-col divide-y-[1px]">
                   {data?.notifications.map((notification) => {
                     return (
                       <NotificationItem

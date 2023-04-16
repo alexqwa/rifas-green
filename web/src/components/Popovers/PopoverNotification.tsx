@@ -8,7 +8,7 @@ export function PopoverNotification() {
 
   return (
     <Popover.Portal>
-      <StyledContent className="block absolute w-[448px] right-[calc(100%-23px)] top-[calc(100%+25px)] shadow-lg">
+      <StyledContent className="block absolute w-[448px] right-[calc(100%-23px)] top-[calc(100%+33px)] shadow-lg">
         <Popover.Arrow className="fill-slate-600 absolute right-[calc(224px-31px)] w-4 h-2" />
         <header className="flex items-center justify-between bg-slate-600 h-[50px] px-5 rounded-tl-[5px] rounded-tr-[5px]">
           <span className="text-base text-white font-bold">Notificações</span>
